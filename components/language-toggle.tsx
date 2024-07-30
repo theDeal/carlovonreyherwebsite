@@ -1,9 +1,6 @@
-"use client";
-
-import * as React from "react";
+import React, { useState } from "react";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-import * as m from "@/paraglide/messages";
 import { Button } from "@/components/ui/button";
 import {
   Command,
@@ -19,42 +16,24 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-import Link from "next/link";
+import { Link, usePathname } from "@/lib/i18n";
+
 const languages = [
   { value: "en", label: "English", flag: "gb" },
   { value: "de", label: "German", flag: "de" },
+  { value: "zh-ch", label: "Chinese (Simplified)", flag: "cn" },
   { value: "fr", label: "French", flag: "fr" },
+  { value: "ja", label: "Japanese", flag: "jp" },
+  { value: "bn", label: "Bengali", flag: "bd" },
   { value: "ru", label: "Russian", flag: "ru" },
-  { value: "jp", label: "Japanese", flag: "jp" },
+  { value: "es", label: "Spanish", flag: "es" }
 ];
 
-export function LanguageToggle() {
+export function LanguageToggle({ currentLanguage }: { currentLanguage: string }) {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
-
-  const changeLanguage = (tag: any) => {
-    
-  };
-
-  const getLanguageName = (language: any) => {
-    switch (language) {
-      case "de":
-        return 'German';
-      case "en":
-        return 'English';
-      case "fr":
-        return 'French';
-      case "ru":
-        return 'Russian';
-      default:
-        return 'Japanese';
-    }
-  };
-
-
-  const [open, setOpen] = React.useState(false);
-
-  const value = "de";
-  
+  const currentLanguageObj = languages.find(lang => lang.value === currentLanguage) || languages[0];
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -65,7 +44,8 @@ export function LanguageToggle() {
           aria-expanded={open}
           className="w-[200px] justify-between"
         >
-          
+          <div className={`fi fi-${currentLanguageObj.flag} mr-2`}></div>
+          {currentLanguageObj.label}
           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
@@ -76,26 +56,23 @@ export function LanguageToggle() {
             <CommandEmpty>No language found.</CommandEmpty>
             <CommandGroup>
               {languages.map((language) => (
-                <Link href={'/'} locale={language.value as "de" | "en" | "fr" | "ru" | "jp" | undefined} key={language.value}>
-                <CommandItem
-                  key={language.value}
-                  value={language.value}
-                  onSelect={() => {
-                    changeLanguage(language.value);
-                    setOpen(false);
-                  }}
-                >
-                  <Check
-                    className={cn(
-                      "mr-2 h-4 w-4",
-                      value === language.value ? "opacity-100" : "opacity-0"
-                    )}
-                  />
-                  <div className={`fi fi-${language.flag} mr-2`}></div>
-                  {language.label}
-                </CommandItem>
-              </Link>
-
+                <Link href={pathname} locale={language?.value || 'de'} key={language.value} hrefLang={language.value}>
+                  <CommandItem
+                    value={language.value}
+                    onSelect={() => {
+                      setOpen(false);
+                    }}
+                  >
+                    <Check
+                      className={cn(
+                        "mr-2 h-4 w-4",
+                        currentLanguage === language.value ? "opacity-100" : "opacity-0"
+                      )}
+                    />
+                    <div className={`fi fi-${language.flag} mr-2`}></div>
+                    {language.label}
+                  </CommandItem>
+                </Link>
               ))}
             </CommandGroup>
           </CommandList>
@@ -104,3 +81,5 @@ export function LanguageToggle() {
     </Popover>
   );
 }
+
+export default LanguageToggle;

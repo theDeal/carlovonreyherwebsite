@@ -145,7 +145,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
+            <Navbar currentLanguage={languageTag()}/>
             {children}
             <Footer />
           </ThemeProvider>

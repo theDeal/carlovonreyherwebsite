@@ -78,7 +78,10 @@
 
     "homepage_meta_desc": "Carlo von Reyher ist ein ein Deutscher Unternehmer und Webentwickler, er ist Geschäftsführer der CVR Holding Ug, von Reyher Media UG, Wineshore UG und der XVNT UG.",
     "feed_meta_desc": "Die neusten Artikel zu Projekten von Carlo von Reyher, und Updates zu seinen Unternehmen und Projekten.",
-    "feed_title": "Neue Artikel und Beiträge von Carlo von Reyher"
+    "feed_title": "Neue Artikel und Beiträge von Carlo von Reyher",
+
+    "navigation_bar_about_me": "Über mich",
+    "navigation_bar_projects": "Projekte und Firmen"
 
 
 }

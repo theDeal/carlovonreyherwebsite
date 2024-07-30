@@ -20,23 +20,29 @@ import { Link } from "@/lib/i18n";
 import { ModeToggle } from "./mode-toggle";
 import { LanguageToggle } from "./language-toggle";
 
+import * as m from "@/paraglide/messages";
+
 interface RouteProps {
   href: string;
   label: string;
 }
 
+
+export const Navbar = ({currentLanguage}: {currentLanguage: string}) => {
+
+
 const routeList: RouteProps[] = [
   {
     href: "/#about",
-    label: "Über mich",
+    label: m.navigation_bar_about_me(),
   },
   {
     href: "/#projects",
-    label: "Projekte und Firmen",
+    label: m.navigation_bar_projects(),
   },
 ];
 
-export const Navbar = () => {
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <header className="sticky top-4 px-10 py-5 md:py-10 rounded-md z-50">
@@ -116,7 +122,7 @@ export const Navbar = () => {
             
 
             <ModeToggle />
-            <LanguageToggle/>
+            <LanguageToggle currentLanguage={currentLanguage}/>
 
           </div>
         </NavigationMenuList>
