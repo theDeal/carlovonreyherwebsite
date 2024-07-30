@@ -58,5 +58,7 @@
         "about_carlo_von_reyher": "Carlo von Reyherは、革新的なプロジェクトとvon Reyher Mediaでのリーダーシップの役割で知られる多才なドイツのWeb開発者、アプリ制作者、起業家です。TUベルリンでの産業工学のバックグラウンドを持つCarloは、彼の仕事で技術と創造性を組み合わせています。彼のポートフォリオには、Webおよびアプリケーション開発における卓越性と効率性への献身を反映する様々なデジタルソリューションが含まれています。CarloはGitHubやProduct Huntなどのプラットフォームでも活躍し、自身の旅を共有し、テクノロジーコミュニティとつながっています。",
         "homepage_meta_desc": "Carlo von Reyherはドイツの起業家およびWeb開発者で、CVR Holding UG、von Reyher Media UG、Wineshore UG、XVNT UGの代表取締役です。",
         "feed_meta_desc": "Carlo von Reyherのプロジェクトに関する最新の記事と、彼の企業やプロジェクトに関する最新情報。",
-        "feed_title": "Carlo von Reyherの新しい記事と投稿"
+        "feed_title": "Carlo von Reyherの新しい記事と投稿",
+        "navigation_bar_about_me": "自己紹介",
+"navigation_bar_projects": "プロジェクトと会社"
 }

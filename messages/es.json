@@ -58,5 +58,9 @@
     "about_carlo_von_reyher": "Carlo von Reyher es un versátil desarrollador web, creador de aplicaciones y empresario alemán, conocido por sus proyectos innovadores y su papel de liderazgo en von Reyher Media. Con formación en Ingeniería Industrial de la TU Berlín, Carlo combina tecnología y creatividad en su trabajo. Su portafolio incluye varias soluciones digitales que reflejan su dedicación a la excelencia y eficiencia en el desarrollo web y de aplicaciones. Carlo también está activo en plataformas como GitHub y Product Hunt, donde comparte su trayectoria y se conecta con la comunidad tecnológica.",
     "homepage_meta_desc": "Carlo von Reyher es un empresario y desarrollador web alemán, es el director general de CVR Holding UG, von Reyher Media UG, Wineshore UG y XVNT UG.",
     "feed_meta_desc": "Los últimos artículos sobre los proyectos de Carlo von Reyher y actualizaciones sobre sus empresas y proyectos.",
-    "feed_title": "Nuevos artículos y publicaciones de Carlo von Reyher"
+    "feed_title": "Nuevos artículos y publicaciones de Carlo von Reyher",
+
+    "navigation_bar_about_me": "Sobre mí",
+"navigation_bar_projects": "Proyectos y empresas"
+
 }
