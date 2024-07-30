@@ -23,77 +23,78 @@ const fontSans = FontSans({
   display: 'swap'
 });
 
-// export const metadata: Metadata = {
-//   title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
-//   description: m.homepage_meta_desc(),
-//   openGraph: {
-//     title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
-//     description: m.homepage_meta_desc(),
-//     type: "website",
-//     locale: 'de',
-//     alternateLocale: [
-//       'en', 'fr', 'ru', 'jp', 'ch', 'es', 'de'
-//     ],
-//     countryName: "Germany",
-//     emails: [
-//       "kontakt@vonreyher.media"
-//     ],
-//   },
-//   twitter: {
-//     creator: '@c_v_reyher',
-//     site: '@c_v_reyher',
-//     description: m.homepage_meta_desc(),
-//     title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
-//     card: "summary_large_image",
-//     images: [
-//       {
-//         url: "./api/og=title=" + 'Projete und Utnernehmen',
-//         alt: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler"
-//       }
-//     ],
-//   },
-//   category: 'Person',
-//   keywords: [
-//     "Carlo von Reyher",
-//     "Webentwickler",
-//     "Unternehmer",
-//     "Deutschland",
-//     "Webdesign",
-//     "von Reyher Media UG (Haftungsbeschränkt)"
-//   ],
-//   icons: [
-//     {
-//       url: '/apple-touch-icon.png',
-//       rel: 'apple-touch-icon'
-//     },
-//     {
-//       url: '/favicon-32x32.png',
-//       rel: 'icon',
-//       sizes: '32x32',
-//       type: 'image/png'
-//     },
-//     {
-//       url: '/favicon-16x16.png',
-//       rel: 'icon',
-//       sizes: '16x16',
-//       type: 'image/png'
-//     },
-//     {
-//       url: '/site.webmanifest',
-//       rel: 'manifest'
-//     },
-//     {
-//       url: '/safari-pinned-tab.svg',
-//       rel: 'mask-icon',
-//       color: '#5bbad5'
-//     },
-//     {
-//       url: '/favicon.ico',
-//       rel: 'shortcut icon'
-//     }
-//   ],
-// };
 
+export async function generateMetadata() {
+  return {
+    title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
+    description: m.homepage_meta_desc(),
+    openGraph: {
+      title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
+      description: m.homepage_meta_desc(),
+      type: "website",
+      locale: 'de',
+      alternateLocale: [
+        'en', 'fr', 'ru', 'jp', 'ch', 'es', 'de'
+      ],
+      countryName: "Germany",
+      emails: [
+        "kontakt@vonreyher.media"
+      ],
+    },
+    twitter: {
+      creator: '@c_v_reyher',
+      site: '@c_v_reyher',
+      description: m.homepage_meta_desc(),
+      title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
+      card: "summary_large_image",
+      images: [
+        {
+          url: "./api/og=title=" + 'Projete und Utnernehmen',
+          alt: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler"
+        }
+      ],
+    },
+    category: 'Person',
+    keywords: [
+      "Carlo von Reyher",
+      "Webentwickler",
+      "Unternehmer",
+      "Deutschland",
+      "Webdesign",
+      "von Reyher Media UG (Haftungsbeschränkt)"
+    ],
+    icons: [
+      {
+        url: '/apple-touch-icon.png',
+        rel: 'apple-touch-icon'
+      },
+      {
+        url: '/favicon-32x32.png',
+        rel: 'icon',
+        sizes: '32x32',
+        type: 'image/png'
+      },
+      {
+        url: '/favicon-16x16.png',
+        rel: 'icon',
+        sizes: '16x16',
+        type: 'image/png'
+      },
+      {
+        url: '/site.webmanifest',
+        rel: 'manifest'
+      },
+      {
+        url: '/safari-pinned-tab.svg',
+        rel: 'mask-icon',
+        color: '#5bbad5'
+      },
+      {
+        url: '/favicon.ico',
+        rel: 'shortcut icon'
+      }],
+  }
+}
 
 
 export default function RootLayout({
