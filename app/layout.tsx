@@ -28,6 +28,7 @@ export async function generateMetadata() {
   return {
     title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
     description: m.homepage_meta_desc(),
+    metadataBase: new URL("https://carlo.vonreyher.com"),
     openGraph: {
       title: "Carlo von Reyher | Deutscher Unternehmer und Webentwickler",
       description: m.homepage_meta_desc(),

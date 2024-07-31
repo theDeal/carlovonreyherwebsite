@@ -56,7 +56,8 @@ export function LanguageToggle({ currentLanguage }: { currentLanguage: string })
             <CommandEmpty>No language found.</CommandEmpty>
             <CommandGroup>
               {languages.map((language) => (
-                <Link href={pathname} locale={language.value ? language.value : 'de'} key={language.value} hrefLang={language.value}>
+                  <Link href={pathname} locale={language?.value as "en" | "de" | "zh-ch" | "fr" | "ja" | "bn" | "ru" | "es"} key={language.value} hrefLang={language.value}>
+
 
                   <CommandItem
                     value={language.value}

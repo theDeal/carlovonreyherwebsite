@@ -9,7 +9,14 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	i18n: {
+		locales: ['de',  'en', 'fr', 'it', 'es', 'ch', 'ru', 'ja', 'zh'],
+		defaultLocale: 'de',
+		localeDetection: false,
+	  },
+
+};
 
 export default paraglide({
 	paraglide: {
